@@ -1,11 +1,10 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import Popup from "./Popup";
 import DataContext from "../context/DataContext";
 
 const Navbar = () => {
-    const { basket } = useContext(DataContext);
+    const { basket, setButtonPopUp } = useContext(DataContext);
 
-    const [buttonPopUp, setButtonPopUp] = useState(false);
 
     return <> <div className="nav-container">
         <p className="navbar">Home</p>
@@ -20,7 +19,7 @@ const Navbar = () => {
         </div>
 
     </div>
-        <Popup buttonPopUp={buttonPopUp} setButtonPopUp={setButtonPopUp} /> </>
+        <Popup /> </>
 }
 
 export default Navbar;
