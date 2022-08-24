@@ -2,8 +2,8 @@ import { useContext } from "react";
 import DataContext from "../context/DataContext";
 import wastebasket from "../images/wastebasket.png"
 
-const Popup = ({ buttonPopUp, setButtonPopUp, children }) => {
-    const { basket, handleDelete, removeFromBasket, addToBasket } = useContext(DataContext);
+const Popup = ({ children }) => {
+    const { basket, handleDelete, removeFromBasket, addToBasket, buttonPopUp, setButtonPopUp } = useContext(DataContext);
 
     return (buttonPopUp) ? (
         <div className='popup'>
