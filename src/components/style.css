@@ -1,0 +1,260 @@
+:root {
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+}
+
+.search-input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    width: 350px;
+    height: 25px;
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid #b2b2b2;
+}
+
+.shopping-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 30px;
+}
+
+
+
+.shopping-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #b2b2b2;
+    width: 320px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+}
+
+.shopping-items:hover {
+    box-shadow: 3px 6px #cccccc;
+}
+
+.shopping-title {
+    height: 30px;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.shopping-img {
+    max-width: 150px;
+    height: 150px;
+    padding-bottom: 5px;
+    border: none;
+}
+
+.shopping-price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-bottom: 1px solid #e5e5e5;
+    height: 80px;
+    font-family: Comic Sans MS;
+}
+
+.cart {
+    position: absolute;
+    float: right;
+    top: 20px;
+    right: 0;
+    background-color: white;
+    width: 200px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    position: absolute;
+    float: left;
+    top: 30px;
+    left: 0;
+    background-color: white;
+    width: 200px;
+    padding: 0;
+    margin: 0;
+}
+
+.add-cart {
+    background-color: #e5e5e5;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    width: 135px;
+    margin-bottom: 20px;
+}
+
+.add-cart:hover {
+    box-shadow: 3px 3px #cccccc;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-inner {
+    width: 450px;
+    height: 80%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: scroll;
+}
+
+.popup-header {
+    height: 60px;
+    background-color: #e5e5e5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-top: 15px;
+    /* overflow: hidden;
+    position: fixed;
+    width: 450px; */
+
+}
+
+.close-btn {
+    margin-left: 380px;
+    font-size: 32px;
+    background: none;
+    border: none;
+    color: #cccccc;
+
+}
+
+.close-btn:hover {
+    cursor: pointer;
+    color: #ffffff;
+    ;
+}
+
+.popup-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding-top: 4px;
+}
+
+.cart-icon {
+    width: 20px;
+    font-size: large;
+    margin-left: 5px;
+}
+
+.cart-quantity {
+    width: 10px;
+    margin: 1px 2px 0 5px;
+    color: #b2b2b2;
+    font-weight: lighter;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.popup-img {
+    width: 100px;
+}
+
+.empty-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bolder;
+    margin-top: 150px;
+}
+
+.popup-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #cccccc;
+    margin: 15px;
+    font-size: 12px;
+    color: #7f7f7f;
+}
+
+.delete-cart-item {
+    height: 50px;
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+
+.delete-img {
+    padding: 2px;
+    width: 30px;
+}
+
+.delete-img:hover {
+    border-bottom: 1px solid #cccccc;
+}
+
+.card-wastebasket {
+    height: 20px;
+}
+
+.wastebasket-btn {
+    height: 30px;
+    width: 40px;
+    margin-right: 50px;
+    border: none;
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+
+.wastebasket-btn:hover {
+    box-shadow: 3px 3px #cccccc;
+}
+
+.add-plus {
+    height: 30px;
+    width: 40px;
+    border: none;
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+
+.add-plus:hover {
+    box-shadow: 3px 3px #cccccc;
+}
+
+.add-del-btn {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
