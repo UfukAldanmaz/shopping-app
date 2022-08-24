@@ -24,14 +24,15 @@ const Popup = ({ buttonPopUp, setButtonPopUp, children }) => {
                                 <h1 className='popup-title'>{item.title}</h1>
                                 <img className='popup-img' src={item.image} alt={item.title} />
                                 <h2 className='popup-price'>${item.price}</h2>
-                                <button onClick={() => addToBasket(item)}>➕</button>
-                                {item.quantity}
-                                <button onClick={() => removeFromBasket(item)}>➖</button>
-
+                                <div className="btn-container">
+                                    <button className="dec-in-btn" onClick={() => addToBasket(item)}>➕</button>
+                                    <p className="quantity-p">{item.quantity}</p>
+                                    <button className="dec-in-btn" onClick={() => removeFromBasket(item)}>➖</button>
+                                </div>
                             </div>)
                     })
                 }
-                {basket.length > 0 ? <p>Total:{basket.reduce((prev, curr) => prev + (curr.price * curr.quantity), 0).toFixed(2)}</p> : ''}
+                {basket.length > 0 ? <p className="price-total"> <b>TOTAL :</b> ${basket.reduce((prev, curr) => prev + (curr.price * curr.quantity), 0).toFixed(2)}</p> : ''}
             </div>
         </div>
     ) : "";

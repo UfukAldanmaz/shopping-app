@@ -102,6 +102,7 @@
     border: none;
     cursor: pointer;
     width: 135px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -154,6 +155,32 @@
     cursor: pointer;
     color: #ffffff;
     ;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0 15px 0;
+    align-items: center;
+}
+
+.dec-in-btn {
+    width: 35px;
+    border: none;
+    margin: 10px;
+    padding: 5px;
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+
+.quantity-p {
+    width: 10px;
+    font-size: 20px;
+}
+
+.price-total {
+    color: #7f7f7f;
+    margin: 30px 0 30px 0;
 }
 
 .popup-btn {
@@ -240,16 +267,33 @@
     box-shadow: 3px 3px #cccccc;
 }
 
-.add-plus {
+.add-btn-on-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    background-color: #F0F0F0;
+    margin-bottom: 5px;
+}
+
+.plus-minus {
     height: 30px;
     width: 40px;
     border: none;
     background-color: #e5e5e5;
     cursor: pointer;
+    margin: 15px;
 }
 
-.add-plus:hover {
+.plus-minus:hover {
     box-shadow: 3px 3px #cccccc;
+}
+
+.quantity-on-card {
+    font-size: medium;
+    width: 10px;
+    color: #7f7f7f;
 }
 
 .add-del-btn {

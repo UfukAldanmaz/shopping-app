@@ -8,10 +8,10 @@ const ShoppingItem = ({ item }) => {
         addToBasket(item);
     }}>Add to Cart</button>
 
-    let second = <div>
-        <button onClick={() => removeFromBasket(item)}>➖</button>
-        {getProduct(item.id)?.quantity}
-        <button className="add-plus" onClick={() => {
+    let second = <div className="add-btn-on-card">
+        <button className="plus-minus" onClick={() => removeFromBasket(item)}>➖</button>
+        <p className="quantity-on-card">{getProduct(item.id)?.quantity}</p>
+        <button className="plus-minus" onClick={() => {
             addToBasket(item);
         }}>➕</button>    </div>
 
