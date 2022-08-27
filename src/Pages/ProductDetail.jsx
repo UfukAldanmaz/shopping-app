@@ -1,17 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import DataContext from "../context/DataContext";
 
 const ProductDetail = () => {
     const [data, setData] = useState({});
-    const [loading, setLoading] = useState(true);
+    const { loading, setLoading } = useContext(DataContext);
     const navigate = useNavigate();
     const { id } = useParams();
 
     const getData = async () => {
-        let { data } = await axios.get(`https://fakestoreapi.com/products/${id}`)
-        setData(data);
-        setLoading(false);
+        try {
+            let { data } = await axios.get(`https://fakestoreapi.com/products/${id}`)
+            setData(data);
+            setLoading(false);
+        } catch (error) {
+            console.log(error);
+        }
+
     }
 
 
