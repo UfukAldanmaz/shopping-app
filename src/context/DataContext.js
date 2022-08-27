@@ -8,6 +8,7 @@ export const DataProvider = ({ children }) => {
 
     const [basket, setBasket] = useState([]);
     const [buttonPopUp, setButtonPopUp] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     const addToBasket = (product) => {
 
@@ -57,7 +58,7 @@ export const DataProvider = ({ children }) => {
     return (
         <DataContext.Provider value={{
             basket, handleDelete, addToBasket, removeFromBasket, getProduct,
-            buttonPopUp, setButtonPopUp
+            buttonPopUp, setButtonPopUp, loading, setLoading
         }} >
             {children}
         </DataContext.Provider>
