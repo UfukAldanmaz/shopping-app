@@ -352,15 +352,8 @@ li:hover {
 .menu-btn:hover {
     background-color: #cccccc;
     border-radius: 50%;
-}
-
-.dots {
-    width: 5px;
-    height: 5px;
-    background-color: #7f7f7f;
-    border-radius: 50%;
-    margin: 1px 0;
-
+    cursor: pointer;
+    color: white;
 }
 
 .detail-container {
