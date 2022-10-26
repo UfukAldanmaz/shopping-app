@@ -1,7 +1,7 @@
 import Home from './components/Home';
 import ProductDetail from './Pages/ProductDetail'
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { DataProvider } from './context/DataContext';
 import Navbar from './components/Navbar';
 import About from './Pages/About';
@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 function App() {
   return (
     <DataProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
         <Routes>
           <Route path="/" element={<div className='App'><Home /></div>} />
@@ -18,7 +18,7 @@ function App() {
           <Route path="/about" element={<About />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </DataProvider>
   );
 }
