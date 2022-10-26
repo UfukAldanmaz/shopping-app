@@ -1,4 +1,5 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
+import axios from "axios";
 
 
 const DataContext = createContext({});
@@ -6,9 +7,27 @@ const DataContext = createContext({});
 
 export const DataProvider = ({ children }) => {
 
+    const [data, setData] = useState([]);
+    const [search, setSearch] = useState('');
     const [basket, setBasket] = useState([]);
     const [buttonPopUp, setButtonPopUp] = useState(false);
     const [loading, setLoading] = useState(true);
+
+    const getData = async () => {
+        try {
+            const res = await axios.get('https://fakestoreapi.com/products')
+            setData(res.data);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    useEffect(() => {
+        getData();
+    }, [])
+
+    const filteredData = data.filter(item => item.title.toLowerCase().includes(search.toLowerCase()));
+
 
     const addToBasket = (product) => {
 
@@ -58,7 +77,7 @@ export const DataProvider = ({ children }) => {
     return (
         <DataContext.Provider value={{
             basket, handleDelete, addToBasket, removeFromBasket, getProduct,
-            buttonPopUp, setButtonPopUp, loading, setLoading
+            buttonPopUp, setButtonPopUp, loading, setLoading, data, setData, filteredData, search, setSearch
         }} >
             {children}
         </DataContext.Provider>
