@@ -1,5 +1,7 @@
+import "./about.css"
+
 const About = () => {
-    return <div>
+    return <div className="about">
         <h1>Who are we?</h1>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin placerat rutrum ligula in aliquet. Nam iaculis pulvinar erat, a pretium lacus pharetra non. Maecenas aliquet nibh ac neque auctor euismod. Pellentesque ultrices ipsum vitae lorem facilisis, ut ornare ipsum lobortis. Quisque dignissim magna in ultricies tempus. Vivamus et lectus neque. Vestibulum ullamcorper ante a augue pretium, non iaculis ex luctus.
