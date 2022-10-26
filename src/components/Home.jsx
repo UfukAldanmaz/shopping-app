@@ -15,10 +15,10 @@ const Home = () => {
 
     return (<div className='container'>
 
-        <label class="menu" onClick={openSideBar}>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
-            <span>&nbsp;</span>
+        <label class="menu" >
+            <span onClick={openSideBar}>&nbsp;</span>
+            <span onClick={openSideBar}>&nbsp;</span>
+            <span onClick={openSideBar}>&nbsp;</span>
         </label>
         {openMenu && <div className='popup'>
             <ul className='sidebar-inner'>
@@ -31,14 +31,15 @@ const Home = () => {
             <button className='sidebar-close-btn' onClick={() => setOpenMenu(false)}>
                 X
             </button>
-        </div>}
+        </div>
+        }
 
         <ShoppingList
             data={filteredData}
         />
 
 
-    </div>)
+    </div >)
 }
 
 export default Home;
