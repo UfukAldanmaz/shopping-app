@@ -11,15 +11,25 @@ body {
 }
 
 .search-input {
-    margin-top: 20px;
-    margin-bottom: 20px;
+
+    /* margin-top: 20px;
+    margin-bottom: 20px; */
     background-color: white;
     width: 350px;
     height: 25px;
     border-radius: 10px;
     padding: 5px;
+    padding-left: 25px;
     border: 1px solid #b2b2b2;
+    background: url("../images/search.svg") no-repeat left;
+    background-size: 20px;
 }
+
+/* .search-icon {
+    position: absolute;
+    margin: auto;
+
+} */
 
 .shopping-list {
     display: flex;
@@ -415,8 +425,9 @@ li:hover {
     top: 0;
     left: 0;
     margin-left: 0;
+    background-color: #b2b2b2;
     width: 100%;
-    background-color: #7f7f7f;
+
 }
 
 .menu span {
