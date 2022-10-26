@@ -20,7 +20,6 @@ const ProductDetail = () => {
 
     }
 
-
     useEffect(() => {
         getData();
     });
@@ -31,7 +30,7 @@ const ProductDetail = () => {
             <div className="detail-info"><h2>{data.title}</h2>
                 <p className="detail-price">Price : ${data.price}</p>
                 <p className="detail-description">{data.description}</p>
-                <button className="detail-back-btn" onClick={() => navigate(-1)}>Go back</button>
+                <button className="detail-back-btn" onClick={() => navigate("/")}>Go back</button>
             </div>
 
         </div>
