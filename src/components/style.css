@@ -68,6 +68,8 @@
 .nav-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     background-color: white;
     border-bottom: 1px solid #e5e5e5;
     height: 80px;
@@ -85,7 +87,14 @@
     margin: 0;
 }
 
-.navbar {
+.homepage {
+    color: #b2b2b2;
+    font-size: 18px;
+    margin-left: 75px;
+    cursor: pointer;
+}
+
+/* .navbar {
     position: absolute;
     float: left;
     top: 30px;
@@ -94,7 +103,7 @@
     width: 200px;
     padding: 0;
     margin: 0;
-}
+} */
 
 .add-cart {
     background-color: #e5e5e5;
@@ -394,4 +403,87 @@ li:hover {
 .detail-back-btn {
     width: 50px;
     height: 50px;
+}
+
+.menu {
+    margin: 80px 0 0px 20px;
+    padding: 19px 16px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu span {
+    width: 38px;
+    background-color: #e5e5e5;
+    height: 4px;
+    display: block;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+/* 
+.menu span:first-child:active {
+    transform: rotate(45deg);
+
+}
+
+.menu span:third-child:active {
+    transform: rotate(-45deg);
+
+} */
+
+.open-menu {
+    left: 0;
+    position: relative;
+}
+
+
+
+.sidebar-inner li {
+    list-style: none;
+}
+
+/* .menu span:first-child:hover {
+    transform: rotate(45deg);
+}
+
+.menu span:last-child:hover {
+    transform: rotate(-45deg);
+    transition-duration: 0.5s;
+} */
+
+
+.menu span:last-child {
+    margin-bottom: 0px;
+}
+
+.sidebar-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    background-color: white;
+    overflow: scroll;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    padding: 50px;
+}
+
+.sidebar-inner li {
+    padding: 5px;
+    margin: 30px;
+}
+
+.sidebar-close-btn {
+    position: absolute;
+    top: 10px;
+    left: 350px;
+    font-size: 26px;
+    background: none;
+    border: none;
+    color: #b2b2b2;
+    cursor: pointer;
 }
