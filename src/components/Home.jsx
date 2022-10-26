@@ -15,11 +15,12 @@ const Home = () => {
 
     return (<div className='container'>
 
-        <label class="menu" >
-            <span onClick={openSideBar}>&nbsp;</span>
-            <span onClick={openSideBar}>&nbsp;</span>
-            <span onClick={openSideBar}>&nbsp;</span>
-        </label>
+        <div class="menu" >
+            <label className='bar-span' onClick={openSideBar}>
+                <span className='bar-span'>&nbsp;</span>
+                <span className='bar-span'>&nbsp;</span>
+                <span className='bar-span'>&nbsp;</span></label>
+        </div>
         {openMenu && <div className='popup'>
             <ul className='sidebar-inner'>
                 <li>Men</li>
