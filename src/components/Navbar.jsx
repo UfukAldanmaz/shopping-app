@@ -1,13 +1,21 @@
 import { useContext } from "react";
 import Popup from "./Popup";
 import DataContext from "../context/DataContext";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
     const { basket, setButtonPopUp } = useContext(DataContext);
+    const navigate = useNavigate();
 
+    // const [search, setSearch] = useState('');
+
+    // const filteredData = data.filter(item => item.title.toLowerCase().includes(search.toLowerCase()));
 
     return <> <div className="nav-container">
-        <p className="navbar">Home</p>
+        {/* <p className="navbar">{Home}</p> */}
+        <h3 className="homepage" onClick={() => navigate("/")} >Home</h3>
+
+        {/* <input value={search} onChange={e => setSearch(e.target.value)} className='search-input' placeholder='Search' /> */}
         <div className="cart">
             <button className="popup-btn" onClick={() => {
                 setButtonPopUp(true);
