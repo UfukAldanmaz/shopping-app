@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { DataProvider } from './context/DataContext';
 import Navbar from './components/Navbar';
 import About from './Pages/About';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path=":id" element={<ProductDetail />} />
           <Route path="/about" element={<About />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </DataProvider>
   );
