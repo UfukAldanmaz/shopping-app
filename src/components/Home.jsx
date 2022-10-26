@@ -1,29 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useContext } from 'react';
 import ShoppingList from './ShoppingList';
 import { useNavigate } from 'react-router-dom';
+import DataContext from '../context/DataContext';
 const Home = () => {
 
-    const [data, setData] = useState([]);
-    const [search, setSearch] = useState('');
     const [openMenu, setOpenMenu] = useState(false);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const { filteredData } = useContext(DataContext);
 
-
-    const getData = async () => {
-        try {
-            const res = await axios.get('https://fakestoreapi.com/products')
-            setData(res.data);
-        } catch (error) {
-            console.log(error);
-        }
-    }
-
-    useEffect(() => {
-        getData();
-    }, [])
-
-    const filteredData = data.filter(item => item.title.toLowerCase().includes(search.toLowerCase()));
 
     const openSideBar = () => {
         setOpenMenu(current => !current)
@@ -31,7 +15,6 @@ const Home = () => {
 
     return (<div className='container'>
 
-        <h1>SHOPPING TIME</h1>
         <label class="menu" onClick={openSideBar}>
             <span>&nbsp;</span>
             <span>&nbsp;</span>
@@ -50,7 +33,6 @@ const Home = () => {
             </button>
         </div>}
 
-        <input value={search} onChange={e => setSearch(e.target.value)} className='search-input' placeholder='Search' />
         <ShoppingList
             data={filteredData}
         />
