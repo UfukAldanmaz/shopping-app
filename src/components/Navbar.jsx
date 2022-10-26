@@ -4,7 +4,8 @@ import DataContext from "../context/DataContext";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-    const { basket, setButtonPopUp } = useContext(DataContext);
+    const { basket, setButtonPopUp, search, setSearch } = useContext(DataContext);
+
     const navigate = useNavigate();
 
     // const [search, setSearch] = useState('');
@@ -14,6 +15,8 @@ const Navbar = () => {
     return <> <div className="nav-container">
         {/* <p className="navbar">{Home}</p> */}
         <h3 className="homepage" onClick={() => navigate("/")} >Home</h3>
+        {/* <input placeholder="Search" /> */}
+        <input value={search} onChange={e => setSearch(e.target.value)} className='search-input' placeholder='Search' />
 
         {/* <input value={search} onChange={e => setSearch(e.target.value)} className='search-input' placeholder='Search' /> */}
         <div className="cart">
