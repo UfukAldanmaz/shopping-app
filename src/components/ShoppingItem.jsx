@@ -58,6 +58,7 @@ const ShoppingItem = ({ item }) => {
                 <div>
                     <h2 className="shopping-title">{item.title}</h2>
                     <img className="shopping-img" src={item.image} alt={item.title} />
+                    <p className="shopping-rate">{item.rating.rate}⭐ ({item.rating.count})</p>
                     <h3 className="shopping-price">{item.price} $</h3>
                 </div>
 
