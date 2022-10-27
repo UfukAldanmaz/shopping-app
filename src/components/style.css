@@ -308,8 +308,8 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    width: 50%;
-    background-color: #F0F0F0;
+    width: 45%;
+    background-color: #ffd300;
     margin-bottom: 5px;
 }
 
@@ -317,14 +317,14 @@ body {
     height: 30px;
     width: 40px;
     border: none;
-    background-color: #e5e5e5;
+    background-color: #f9e076;
     cursor: pointer;
     margin: 15px;
 }
 
-.plus-minus:hover {
-    box-shadow: 3px 3px #cccccc;
-}
+/* .plus-minus:hover {
+    box-shadow: 1px 1px #e5e5e5;
+} */
 
 .quantity-on-card {
     font-size: medium;
