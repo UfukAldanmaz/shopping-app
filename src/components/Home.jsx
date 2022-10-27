@@ -15,7 +15,8 @@ const Home = () => {
     }
 
     const handleCategoryChange = (e) => {
-        setSelectedCategory(e.target.getAttribute("data-category"))
+        setSelectedCategory(e.target.getAttribute("data-category"));
+        setOpenMenu(false);
     }
 
     const filteredList = () => {
