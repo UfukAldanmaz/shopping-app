@@ -14,7 +14,7 @@ const Navbar = () => {
 
     return <> <div className="nav-container">
         {/* <p className="navbar">{Home}</p> */}
-        <h3 className="homepage" onClick={() => navigate("/")} >Home</h3>
+        <h3 className="homepage" onClick={() => navigate("/")} >ShopAll</h3>
         {/* <input placeholder="Search" /> */}
         <input value={search} onChange={e => setSearch(e.target.value)} className='search-input' placeholder='Search' />
 
