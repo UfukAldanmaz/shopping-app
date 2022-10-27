@@ -4,6 +4,11 @@
 
 body {
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
 }
 
 .container {
@@ -75,6 +80,11 @@ body {
 .shopping-price {
     font-size: 18px;
     font-weight: bold;
+}
+
+.shopping-rate {
+    font-size: smaller;
+    font-weight: 250;
 }
 
 .nav-container {
@@ -518,7 +528,8 @@ li:hover {
     background-color: #595858;
     bottom: 0;
     left: 0;
-    margin-top: 100px;
+    /* margin-top: 100px; */
+    margin: auto 0;
 }
 
 .footer-container li {
