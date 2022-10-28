@@ -12,13 +12,6 @@ import '../style.css'
 const Home = () => {
 
     const navigate = useNavigate();
-    // const { filteredData } = useContext(DataContext);
-    const slides = [
-        { url: 'http://localhost:3000/image-1.jpg', title: "electronics" },
-        // { url: 'http://localhost:3000/jewelery.jpg' },
-        // { url: 'http://localhost:3000/women.jpg' }
-
-    ]
 
     const handleCategoryChange = (e) => {
         navigate(
@@ -26,38 +19,37 @@ const Home = () => {
         );
     }
 
-
     return (
         <div className='container'>
 
-            <div style={{ height: '280px', width: "500px", margin: "0 auto" }} className='image-slider'>
-                <ImageSlider slides={slides} />
+            <div className='image-slider'>
+                <ImageSlider />
             </div>
 
-            <div id='shopping-list'>
-                <div className='shopping-items'>
+            <div className='shopping-list-home'>
+                <div className='shopping-items-home'>
                     <h2>All</h2>
-                    <img data-category="" onClick={(e) => handleCategoryChange(e)} style={{ width: '300px', borderRadius: "15px" }} src={All} />
+                    <img data-category="" onClick={(e) => handleCategoryChange(e)} className="shopping-img-home" src={All} alt="All" />
 
                 </div>
-                <div className='shopping-items' >
+                <div className='shopping-items-home' >
                     <h2>Men</h2>
-                    <img data-category="men's clothing" onClick={(e) => handleCategoryChange(e)} className="shopping-img" src={Men} alt="Men" />
+                    <img data-category="men's clothing" onClick={(e) => handleCategoryChange(e)} className="shopping-img-home" src={Men} alt="Men" />
 
                 </div>
-                <div className='shopping-items'>
+                <div className='shopping-items-home'>
                     <h2>Women</h2>
-                    <img data-category="women's clothing" onClick={(e) => handleCategoryChange(e)} className="shopping-img" src={Women} alt="Women" />
+                    <img data-category="women's clothing" onClick={(e) => handleCategoryChange(e)} className="shopping-img-home" src={Women} alt="Women" />
 
                 </div>
-                <div className='shopping-items'>
+                <div className='shopping-items-home'>
                     <h2>Jewelery</h2>
-                    <img data-category="jewelery" onClick={(e) => handleCategoryChange(e)} className="shopping-img" src={Jewelery} alt="Jewelery" />
+                    <img data-category="jewelery" onClick={(e) => handleCategoryChange(e)} className="shopping-img-home" src={Jewelery} alt="Jewelery" />
 
                 </div>
-                <div className='shopping-items'>
+                <div className='shopping-items-home'>
                     <h2>Electronics</h2>
-                    <img data-category="electronics" onClick={(e) => handleCategoryChange(e)} className="shopping-img" src={Electronics} alt="electronics" />
+                    <img data-category="electronics" onClick={(e) => handleCategoryChange(e)} className="shopping-img-home" src={Electronics} alt="electronics" />
 
                 </div>
             </div>
