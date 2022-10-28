@@ -1,16 +1,21 @@
 {
   "files": {
-    "main.css": "/shopping-app/static/css/main.a850a78f.css",
-    "main.js": "/shopping-app/static/js/main.a32dce2d.js",
+    "main.css": "/shopping-app/static/css/main.49a0830a.css",
+    "main.js": "/shopping-app/static/js/main.f061b8d3.js",
     "static/js/787.6962f9d7.chunk.js": "/shopping-app/static/js/787.6962f9d7.chunk.js",
+    "static/media/all.png": "/shopping-app/static/media/all.e8fa61ac6be5e70d5e80.png",
+    "static/media/electronics.jpg": "/shopping-app/static/media/electronics.3483170fe9a4fdf2cf08.jpg",
+    "static/media/men.jpg": "/shopping-app/static/media/men.3f14b9bd3d076452d15f.jpg",
+    "static/media/jewelery.jpg": "/shopping-app/static/media/jewelery.30800538fa81ccda8fdb.jpg",
+    "static/media/women.jpg": "/shopping-app/static/media/women.b64f1c03785586da79eb.jpg",
     "index.html": "/shopping-app/index.html",
     "static/media/search.svg": "/shopping-app/static/media/search.5b5a18e8aba6281faacc.svg",
-    "main.a850a78f.css.map": "/shopping-app/static/css/main.a850a78f.css.map",
-    "main.a32dce2d.js.map": "/shopping-app/static/js/main.a32dce2d.js.map",
+    "main.49a0830a.css.map": "/shopping-app/static/css/main.49a0830a.css.map",
+    "main.f061b8d3.js.map": "/shopping-app/static/js/main.f061b8d3.js.map",
     "787.6962f9d7.chunk.js.map": "/shopping-app/static/js/787.6962f9d7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a850a78f.css",
-    "static/js/main.a32dce2d.js"
+    "static/css/main.49a0830a.css",
+    "static/js/main.f061b8d3.js"
   ]
 }
