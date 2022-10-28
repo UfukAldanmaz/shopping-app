@@ -20,7 +20,7 @@ const Products = () => {
         console.log(category, filteredData.length);
         const selectedData = filteredList();
         setList(selectedData);
-    }, [filteredData])
+    }, [filteredData, category])
 
 
     return <div id="shopping-list">{list.map(item =>
