@@ -1,66 +1,68 @@
-import React, { useState, useContext, useEffect } from 'react';
-import ShoppingList from './ShoppingList';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import DataContext from '../context/DataContext';
+import ImageSlider from './ImageSlider';
+import All from '../images/all.png'
+import Men from '../images/men.jpg'
+import Women from '../images/women.jpg'
+import Jewelery from '../images/jewelery.jpg'
+import Electronics from '../images/electronics.jpg'
+import '../style.css'
+
+
 const Home = () => {
 
-    const [openMenu, setOpenMenu] = useState(false);
-    const [selectedCategory, setSelectedCategory] = useState();
     const navigate = useNavigate();
-    const { filteredData } = useContext(DataContext);
-    const [list, setList] = useState(filteredData);
+    // const { filteredData } = useContext(DataContext);
+    const slides = [
+        { url: 'http://localhost:3000/image-1.jpg', title: "electronics" },
+        // { url: 'http://localhost:3000/jewelery.jpg' },
+        // { url: 'http://localhost:3000/women.jpg' }
 
-    const openSideBar = () => {
-        setOpenMenu(current => !current)
-    }
+    ]
 
     const handleCategoryChange = (e) => {
-        setSelectedCategory(e.target.getAttribute("data-category"));
-        setOpenMenu(false);
+        navigate(
+            `/products/${e.target.getAttribute("data-category")}`
+        );
     }
 
-    const filteredList = () => {
-        if (!selectedCategory) {
-            return filteredData;
-        }
 
-        return filteredData.filter((item) => item.category === selectedCategory);
-    }
+    return (
+        <div className='container'>
 
-    useEffect(() => {
-        const selectedData = filteredList();
-        setList(selectedData);
-    }, [filteredList])
+            <div style={{ height: '280px', width: "500px", margin: "0 auto" }} className='image-slider'>
+                <ImageSlider slides={slides} />
+            </div>
 
+            <div id='shopping-list'>
+                <div className='shopping-items'>
+                    <h2>All</h2>
+                    <img data-category="" onClick={(e) => handleCategoryChange(e)} style={{ width: '300px', borderRadius: "15px" }} src={All} />
 
-    return (<div className='container'>
+                </div>
+                <div className='shopping-items' >
+                    <h2>Men</h2>
+                    <img data-category="men's clothing" onClick={(e) => handleCategoryChange(e)} className="shopping-img" src={Men} alt="Men" />
 
-        <div class="menu" >
-            <label className='bar-span' onClick={openSideBar}>
-                <span className='bar-span'>&nbsp;</span>
-                <span className='bar-span'>&nbsp;</span>
-                <span className='bar-span'>&nbsp;</span></label>
+                </div>
+                <div className='shopping-items'>
+                    <h2>Women</h2>
+                    <img data-category="women's clothing" onClick={(e) => handleCategoryChange(e)} className="shopping-img" src={Women} alt="Women" />
+
+                </div>
+                <div className='shopping-items'>
+                    <h2>Jewelery</h2>
+                    <img data-category="jewelery" onClick={(e) => handleCategoryChange(e)} className="shopping-img" src={Jewelery} alt="Jewelery" />
+
+                </div>
+                <div className='shopping-items'>
+                    <h2>Electronics</h2>
+                    <img data-category="electronics" onClick={(e) => handleCategoryChange(e)} className="shopping-img" src={Electronics} alt="electronics" />
+
+                </div>
+            </div>
         </div>
-        {openMenu && <div className='popup'>
-            <ul className='sidebar-inner'>
-                <li data-category="" onClick={handleCategoryChange}>All</li>
-                <li data-category="men's clothing" onClick={handleCategoryChange}>Men</li>
-                <li data-category="women's clothing" onClick={handleCategoryChange}>Women</li>
-                <li data-category="jewelery" onClick={handleCategoryChange}>Accessories</li>
-                <li data-category="electronics" onClick={handleCategoryChange}>Electronics</li>
-                <li>Your Profile</li>
-                <li onClick={() => navigate('/about')}>About Us</li>
-
-            </ul>
-            <button className='sidebar-close-btn' onClick={() => setOpenMenu(false)}>
-                X
-            </button>
-        </div>
-        }
-        <ShoppingList
-            data={list}
-        />
-    </div >)
+    )
 }
 
 export default Home;
