@@ -1,6 +1,7 @@
 import { useContext, useState, useRef, useEffect } from "react";
 import DataContext from "../context/DataContext";
 import { useNavigate } from "react-router-dom";
+import "../style.css"
 
 const ShoppingItem = ({ item }) => {
     const { addToBasket, removeFromBasket, getProduct } = useContext(DataContext);
@@ -51,7 +52,7 @@ const ShoppingItem = ({ item }) => {
                 <div className="three-dots-option" ref={container}><button onClick={handleDropdown} className="menu-btn">⋮</button>
                     {openDropdown && <div className="drop-down">
                         <ul>
-                            <li onClick={() => navigate(`${item.id}`)}>Details</li>
+                            <li onClick={() => navigate(`/${item.id}`)}>Details</li>
                         </ul>
                     </div>}
                 </div>
