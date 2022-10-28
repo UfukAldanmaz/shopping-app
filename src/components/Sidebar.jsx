@@ -18,7 +18,7 @@ const Sidebar = () => {
 
     return (
         <div className='container'>
-            <div class="menu" >
+            <div className="menu" >
                 <label className='bar-span' onClick={openSideBar}>
                     <span className='bar-span'>&nbsp;</span>
                     <span className='bar-span'>&nbsp;</span>
