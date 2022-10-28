@@ -1,7 +1,7 @@
 import Home from './components/Home';
 import ProductDetail from './Pages/ProductDetail'
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { DataProvider } from './context/DataContext';
 import Navbar from './components/Navbar';
 import About from './Pages/About';
@@ -12,7 +12,7 @@ import Sidebar from './components/Sidebar';
 function App() {
   return (
     <DataProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
         <Sidebar />
         <Routes>
@@ -25,7 +25,7 @@ function App() {
           </Route>
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </DataProvider>
   );
 }
