@@ -26,14 +26,14 @@ const ProductDetail = () => {
     }, []);
 
     let first = <button className="add-cart-detail" onClick={() => {
-        addToBasket(id);
+        addToBasket(data);
     }}>Add to Cart</button>
 
     let second = <div className="add-btn-on-card-detail">
-        <button className="plus-minus-detail" onClick={() => removeFromBasket(id)}>-</button>
-        <p className="quantity-on-card-detail">{getProduct(id.id)?.quantity}</p>
+        <button className="plus-minus-detail" onClick={() => removeFromBasket(data)}>-</button>
+        <p className="quantity-on-card-detail">{getProduct(data.id)?.quantity}</p>
         <button className="plus-minus-detail" onClick={() => {
-            addToBasket(id);
+            addToBasket(data);
         }}>+</button>    </div>
 
     const getProductInBasket = (product) => {
@@ -53,7 +53,7 @@ const ProductDetail = () => {
             <div className="detail-info">
                 <h2 className="detail-title">{data.title}</h2>
                 <p className="detail-price"> ${data.price}</p>
-                {getProductInBasket(id)}
+                {getProductInBasket(data)}
                 <p className="detail-description">{data.description}</p>
                 <button className="detail-back-btn" onClick={() => navigate("/")}>Go back</button>
 
