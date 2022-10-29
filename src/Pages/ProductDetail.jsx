@@ -50,7 +50,8 @@ const ProductDetail = () => {
         <div className="detail-container">
             <div className="detail-img"> <img width={100} src={data.image} alt={data.title} />
             </div>
-            <div className="detail-info"><h2>{data.title}</h2>
+            <div className="detail-info">
+                <h2 className="detail-title">{data.title}</h2>
                 <p className="detail-price"> ${data.price}</p>
                 {getProductInBasket(id)}
                 <p className="detail-description">{data.description}</p>
