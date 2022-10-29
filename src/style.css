@@ -593,16 +593,12 @@ li:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: bolder;
-    color: #fff;
-    text-shadow: 1px 2px #7f7f7f;
     margin: auto;
     width: 750px;
     height: 100%;
     border-radius: 10px;
     background-position: center;
     background-size: cover;
-    cursor: pointer;
 }
 
 .slider {
@@ -613,4 +609,15 @@ li:hover {
 .slider-text {
     font-size: x-large;
     color: #ffd300;
+    cursor: auto;
+}
+
+.slide-icon {
+    color: #fff;
+    opacity: 0.5;
+    text-shadow: 2px 3px #595858;
+    font-weight: bolder;
+    cursor: pointer;
+
+
 }
