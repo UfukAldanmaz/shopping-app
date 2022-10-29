@@ -47,6 +47,7 @@
 .detail-container {
     position: relative;
     margin: 100px;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -54,28 +55,40 @@
 }
 
 .detail-img {
+    display: flex;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     width: 300px;
+    height: 350px;
     border: 1px solid #b2b2b2;
     padding: 20px;
     border-radius: 15px;
 }
 
 .detail-img>img {
-    width: 250px;
+    width: 80%;
+    margin: auto;
+    display: block;
 }
 
 .detail-info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 335px;
+    height: 350px;
     padding: 20px;
     width: 50%;
     border: 1px solid #b2b2b2;
     margin: 50px 5px;
     border-radius: 15px;
 
+}
+
+.detail-title {
+    font-size: larger;
+    width: 80%;
+    text-overflow: ellipsis ellipsis;
 }
 
 .detail-price {
