@@ -7,7 +7,7 @@ const ImageSlider = () => {
         <div className="slider">
 
             <div className="slides" style={{ backgroundImage: `url(${images[currentIndex].img})` }}>
-                <div onClick={() => {
+                <div className="slide-icon" onClick={() => {
                     currentIndex > 0 && setCurrentIndex(currentIndex - 1)
                 }} style={{ fontSize: "100px", float: "left" }}>
                     ﹤
@@ -18,7 +18,7 @@ const ImageSlider = () => {
                     <p>{images[currentIndex].subtitle}</p>
                 </div>
 
-                <div onClick={() => {
+                <div className="slide-icon" onClick={() => {
                     currentIndex < images.length - 1 && setCurrentIndex(currentIndex + 1)
                 }} style={{ fontSize: "100px", float: "right" }}>
                     ﹥
