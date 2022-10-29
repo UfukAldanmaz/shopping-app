@@ -429,46 +429,6 @@ li:hover {
     color: white;
 }
 
-.detail-container {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.detail-img {
-    width: 500px;
-    border: 1px solid #b2b2b2;
-    padding: 20px;
-}
-
-.detail-img>img {
-    width: 300px;
-}
-
-.detail-info {
-    width: 50%;
-    border: 1px solid #b2b2b2;
-    margin: 50px;
-
-}
-
-.detail-price {
-    border: 1px solid #b2b2b2;
-
-}
-
-.detail-description {
-    border: 1px solid #b2b2b2;
-
-}
-
-.detail-back-btn {
-    width: 50px;
-    height: 50px;
-}
-
 .menu {
     margin: 80px 0 0px 20px;
     padding: 19px 16px 29px 26px;
