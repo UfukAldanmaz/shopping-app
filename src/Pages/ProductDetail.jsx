@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import DataContext from "../context/DataContext";
+import "./product-detail.css"
 
 const ProductDetail = () => {
     const [data, setData] = useState({});
@@ -29,11 +30,11 @@ const ProductDetail = () => {
     }}>Add to Cart</button>
 
     let second = <div className="add-btn-on-card-detail">
-        <button className="plus-minus-detail" onClick={() => removeFromBasket(id)}>➖</button>
+        <button className="plus-minus-detail" onClick={() => removeFromBasket(id)}>-</button>
         <p className="quantity-on-card-detail">{getProduct(id.id)?.quantity}</p>
         <button className="plus-minus-detail" onClick={() => {
             addToBasket(id);
-        }}>➕</button>    </div>
+        }}>+</button>    </div>
 
     const getProductInBasket = (product) => {
         const found = getProduct(product.id)
@@ -50,13 +51,12 @@ const ProductDetail = () => {
             <div className="detail-img"> <img width={100} src={data.image} alt={data.title} />
             </div>
             <div className="detail-info"><h2>{data.title}</h2>
-                <p className="detail-price">Price : ${data.price}</p>
+                <p className="detail-price"> ${data.price}</p>
+                {getProductInBasket(id)}
                 <p className="detail-description">{data.description}</p>
                 <button className="detail-back-btn" onClick={() => navigate("/")}>Go back</button>
 
             </div>
-            {/* <button>Add to Cart</button> */}
-            {getProductInBasket(id)}
         </div>
     );
 }
